@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Garasho Dhaqan — safar aqooneed ku saabsan dhaqanka, hiddaha iyo suugaanta Soomaaliyeed.">
+    <title>Garasho Dhaqan | Safarka Aqoonta Soomaaliyeed</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main class="app-shell">
+        <header class="site-header">
+            <a class="brand" href="#" aria-label="Garasho Dhaqan bogga hore">
+                <span class="brand-mark" aria-hidden="true">🇸🇴</span>
+                <span>GARASHO <strong>DHAQAN</strong></span>
+            </a>
+            <span class="edition-label">SOMALI EDITION</span>
+        </header>
+
+        <section id="welcome-screen" class="screen welcome-screen">
+            <div class="hero-symbol" aria-hidden="true">🧭</div>
+            <p class="eyebrow">SAFARKA AQOONTA SOOMAALIYEED</p>
+            <h1>Imtixaan aqoontaada.<br><span>Sahmi dhaqankeena.</span></h1>
+            <p class="intro">U diyaar garow safar xiiso leh oo aad ku baranayso cuntada, dhaqanka, nolosha reer miyiga iyo suugaanta Soomaaliyeed.</p>
+            <div class="welcome-facts">
+                <div><strong>4</strong><span>Qaybood</span></div>
+                <div><strong>20</strong><span>Su'aalood</span></div>
+                <div><strong>10+</strong><span>Dhibcood</span></div>
+            </div>
+            <button id="start-btn" class="btn btn-primary">Bilow Safarka <span aria-hidden="true">→</span></button>
+            <p class="small-note">Ma jiro waqti lagugu xaddiday. Si deggan uga fikir jawaab kasta.</p>
+        </section>
+
+        <section id="category-screen" class="screen hidden">
+            <div class="section-heading">
+                <p class="eyebrow">MARXALADDA 01</p>
+                <h2>Dooro halka aad u safreyso</h2>
+                <p>Qayb kasta waxay leedahay shan su'aalood. Waxaad u ciyaari kartaa sida aad doonto.</p>
+            </div>
+            <div id="category-list" class="category-grid"></div>
+            <div class="journey-summary">
+                <span id="category-progress">0 / 4 qaybood ayaa dhammaaday</span>
+                <span id="total-score">Dhibcaha: 0</span>
+            </div>
+        </section>
+
+        <section id="quiz-screen" class="screen hidden">
+            <div class="quiz-topline">
+                <button id="back-to-categories-btn" class="text-button" type="button">← Qaybaha</button>
+                <span id="quiz-category-label" class="category-pill">Qaybta</span>
+                <span id="quiz-score" class="score-pill">0 dhibcood</span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-label="Horumarka su'aalaha" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+            <div class="question-meta">
+                <span id="question-count">Su'aal 1 / 5</span>
+                <span id="streak-count">🔥 Isku xigxig: 0</span>
+            </div>
+            <article class="question-card">
+                <p class="eyebrow">KA FIKIR, KADIBNA DOORO</p>
+                <h2 id="question-text">Su'aashu halkan ayay ka muuqan doontaa.</h2>
+                <div id="answer-list" class="answer-list"></div>
+                <p id="feedback" class="feedback" aria-live="polite"></p>
+                <button id="next-btn" class="btn btn-primary hidden" type="button">Su'aasha xigta <span aria-hidden="true">→</span></button>
+            </article>
+        </section>
+
+        <section id="category-result-screen" class="screen hidden">
+            <div class="result-icon" aria-hidden="true">🧭</div>
+            <p class="eyebrow">QAYBTII WAY DHAMMAATAY</p>
+            <h2 id="category-result-title">Safar wanaagsan!</h2>
+            <p id="category-result-message" class="intro"></p>
+            <div class="result-stats">
+                <div><strong id="category-result-score">0</strong><span>Dhibcood</span></div>
+                <div><strong id="category-result-correct">0 / 5</strong><span>Sax</span></div>
+                <div><strong id="category-result-wrong">0</strong><span>Khalad</span></div>
+            </div>
+            <button id="continue-btn" class="btn btn-primary">Ku noqo qaybaha <span aria-hidden="true">→</span></button>
+        </section>
+
+        <section id="final-screen" class="screen hidden">
+            <div class="result-icon" aria-hidden="true">🏆</div>
+            <p class="eyebrow">SAFARKA WAA LA DHAMMEYSTIRAY</p>
+            <h2 id="final-rank">Aqoonyahan Dhaqan</h2>
+            <p id="final-message" class="intro"></p>
+            <div class="final-score"><strong id="final-score">0</strong><span>dhibcood</span></div>
+            <div class="result-stats">
+                <div><strong id="final-correct">0</strong><span>Jawaab sax ah</span></div>
+                <div><strong id="final-wrong">0</strong><span>Jawaab khaldan</span></div>
+                <div><strong id="final-categories">4 / 4</strong><span>Qaybood</span></div>
+            </div>
+            <button id="play-again-btn" class="btn btn-primary">Mar kale ciyaar ↻</button>
+        </section>
+
+        <footer class="site-footer">
+            <span>Garasho Dhaqan</span>
+            <span>Waxaa lagu dhisay HTML, CSS &amp; Vanilla JavaScript</span>
+        </footer>
+    </main>
+</body>
+</html>
